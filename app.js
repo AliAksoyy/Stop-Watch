@@ -20,13 +20,30 @@ function stopWatch () {
     if(seconds / 60 ===1) {
         seconds = 0
         minutes++
+        
 
         if(minutes / 60 ===1) {
             minutes = 0;
             hours++;
         }
     }
-    let displayTimer = document.querySelector("#timer").innerText = `${hours}: ${minutes} ${seconds}`
+    if(seconds<10){
+        leadingSeconds = "0" + seconds.toString()
+    }else {
+        leadingSeconds = seconds
+    }
+    if(minutes<10){
+        leadingMinutes = "0" + minutes.toString()
+    }else {
+        leadingMinutes = minutes
+    }
+    if(hours<10){
+        leadingHours = "0" + hours.toString()
+    }else {
+        leadingHours = hours
+    }
+
+    let displayTimer = document.querySelector("#timer").innerText = `${leadingHours}: ${leadingMinutes}: ${leadingSeconds}`
   
 }
 window.setInterval(stopWatch,1000)
