@@ -32,6 +32,28 @@ body {
     padding-top: 30px;
 }
 
-#buttons {
+.buttons {
+    /* border: 1px solid red; */
     margin-top: 40px;
+}
+
+button {
+    margin: 0 10px;
+    border: none;
+}
+button i {
+    font-size: 2rem;
+    padding: 10px;
+    color: #fff;
+    width: 50px;
+}
+
+#play {
+    background-color: green;
+}
+#reset {
+background-color: red;
+}
+#pause {
+background-color: orange;
 }
