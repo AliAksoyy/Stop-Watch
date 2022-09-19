@@ -1,7 +1,8 @@
 // variable 
 
 const startStopBtn = document.querySelector("#startStopBtn");
-const resetBtn =document.querySelector("#resertBtn")
+const resetBtn =document.querySelector("#resetBtn")
+
 
 
 // variables for time values
@@ -60,8 +61,19 @@ startStopBtn.addEventListener("click", function() {
         window.clearInterval(timerInterval)
         document.getElementById(
           "startStopBtn"
-        ).innerHTML = `<i class="fa-solid fa-pause" id="pause"></i>`;
+        ).innerHTML = `<i class="fa-solid fa-play" id="play"></i>`;
+        timerStatus = "stopped"
     }
+})
+
+resetBtn.addEventListener("click", ()=> {
+    console.log("ali")
+    let leadingSeconds = 0;
+    let leadingMinutes = 0;
+    let leadingHours = 0;
+    displayTimer = document.querySelector(
+      "#timer"
+    ).innerText = `${leadingHours}: ${leadingMinutes}: ${leadingSeconds}`;
 })
 
 
