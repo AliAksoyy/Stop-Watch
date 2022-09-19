@@ -14,8 +14,7 @@ let leadingMinutes = 0
 let leadingHours = 0
 
 // variables for set interval & functions
-let timerInterval = null
-let timerStatus ="stopped"
+
 
 // stop watch function
 
@@ -52,16 +51,6 @@ function stopWatch () {
 }
 // window.setInterval(stopWatch,1000)
 
-startStopBtn.addEventListener("click", ()=> {
 
-    if(timerStatus === "stopped") {
-        timerInterval =window.setInterval(startStopBtn, 1000)
-        document.querySelector("#startStopBtn").innerHTML = `<i class="fa-solid fa-pause" id="pause"></i>`
-    }else {
-        window.clearInterval(timerInterval)
-        document.querySelector("#startStopBtn").innerHTML =`<i class="fa-solid fa-play" id="play"></i>`;
-        timerStatus = "stopped"
-    }
-})
 
 
