@@ -68,9 +68,9 @@ startStopBtn.addEventListener("click", function() {
 
 resetBtn.addEventListener("click", ()=> {
     console.log("ali")
-    let leadingSeconds = 0;
-    let leadingMinutes = 0;
-    let leadingHours = 0;
+    let leadingSeconds = "0"+0;
+    let leadingMinutes = "0" +0;
+    let leadingHours = "0" +0;
     displayTimer = document.querySelector(
       "#timer"
     ).innerText = `${leadingHours}: ${leadingMinutes}: ${leadingSeconds}`;
